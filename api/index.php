@@ -3,9 +3,14 @@
 // header('content-type: application/json');
 header('context-type: text/html;charset=utf-8');
 // echo json_encode(['time' => time(), 'date' => date('d.m.Y'), 'tech' => 'Vercel']);
-?>
 
-<h1><?php echo isset($_GET['name']) ? $_GET['name'] : 'Hállex Costa';  ?></h1>
+
+if (isset($_GET['name'])) {
+?>
+  <h1><?= $_GET['name'] ?></h1>
+<?php
+}
+?>
 
 <?php
 if (!isset($_GET['name'])) {
