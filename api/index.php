@@ -8,4 +8,6 @@ header('context-type: text/html;charset=utf-8');
 <h1><?php isset($_GET['name']) ? $_GET['name'] : 'Hállex Costa';  ?></h1>
 
 <?php
-require_once __DIR__ . '/../index.html';
+if (!isset($_GET['name'])) {
+  require_once __DIR__ . '/../index.html';
+}
